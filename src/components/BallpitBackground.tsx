@@ -625,7 +625,6 @@ class Spheres extends InstancedMesh {
     const envMap = pmremGenerator.fromScene(envScene as any).texture;
     const geometry = new SphereGeometry();
     const material = new SubsurfaceMaterial({ envMap, ...config.materialParams });
-    (material as any).envMapRotation.x = -Math.PI / 2;
     super(geometry, material, config.count);
     this.config = config;
     this.physics = new Physics(config);
