@@ -14,7 +14,7 @@ const NEAR_LOCATIONS = [
 	{
 		name: "Supermercado Feitosa",
 		address: "Av. Mário Madeira, 652 - Lot. Bela Laguna",
-		image: "../near-locations/1.webp",
+		image: "./near-locations/1.webp",
 		url: "https://maps.app.goo.gl/sGK2NpayiuWZbQLA7",
 	},
 	{
