@@ -5,7 +5,6 @@ import { Card } from "@/components/ui/card";
 import profileImage from "@/assets/profile.png";
 import Confetti from "react-confetti";
 
-import LOGO from "@/assets/logo.webp";
 import NearLocations from "./NearLocations";
 import { HoverPeek } from "./PreviewCard";
 import PartySongTrigger from "./PartySongTrigger";
@@ -62,7 +61,7 @@ const InvitationCard = () => {
 								Você foi convidado para a
 							</h1>
 							<img
-								src={LOGO}
+								src={"/logo.webp"}
 								alt="Festa do Weslito"
 								className="breathing"
 								width={300}
