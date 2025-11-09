@@ -6,7 +6,7 @@ export interface PartySongTriggerProps {
 
 export default function PartySongTrigger({ children }: PartySongTriggerProps) {
 	const [audio] = useState(
-		new Audio("/songs/yeah-yeah-yeahs-heads-will-roll.mp3")
+		new Audio("./songs/yeah-yeah-yeahs-heads-will-roll.mp3")
 	);
 	const [isPlaying, setIsPlaying] = useState(false);
 

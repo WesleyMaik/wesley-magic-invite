@@ -3,7 +3,7 @@
 import { ReactNode } from "react";
 import { Drawer } from "vaul";
 
-import LOCATION_1 from "@/assets/near-locations/1.webp";
+import LOCATION_1 from "@/assets./near-locations/1.webp";
 import { Separator } from "./ui/separator";
 
 interface NearLocationsProps {
@@ -14,19 +14,19 @@ const NEAR_LOCATIONS = [
 	{
 		name: "Supermercado Feitosa",
 		address: "Av. Mário Madeira, 652 - Lot. Bela Laguna",
-		image: "/near-locations/1.webp",
+		image: "../near-locations/1.webp",
 		url: "https://maps.app.goo.gl/sGK2NpayiuWZbQLA7",
 	},
 	{
 		name: "Conveniência Joes",
 		address: "R. Poente - Bairro Bela Laguna",
-		image: "/near-locations/2.webp",
+		image: "./near-locations/2.webp",
 		url: "https://maps.app.goo.gl/tJRvYkN169nJN3QW7",
 	},
 	{
 		name: "Supermercados Pires (não é perto não)",
 		address: "R. Acaia, 760 - Jardim Taruma",
-		image: "/near-locations/3.webp",
+		image: "./near-locations/3.webp",
 		url: "https://maps.app.goo.gl/MniZia52XEUtduRj9",
 	},
 ];
