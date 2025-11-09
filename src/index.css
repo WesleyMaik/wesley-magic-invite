@@ -2,91 +2,144 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+	font-family: "Geist";
+	src: url("/fonts/GeistSans-Regular.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Geist";
+	src: url("/fonts/GeistSans-SemiBold.woff2") format("woff2");
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Geist Mono";
+	src: url("/fonts/GeistMono-SemiBold.woff2") format("woff2");
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Geist Mono";
+	src: url("/fonts/GeistMono-Regular.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+}
+
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
 
 @layer base {
-  :root {
-    --background: 220 25% 10%;
-    --foreground: 210 40% 98%;
+	:root {
+		--background: 220 25% 10%;
+		--foreground: 210 40% 98%;
 
-    --card: 220 20% 15%;
-    --card-foreground: 210 40% 98%;
+		--card: 220 20% 15%;
+		--card-foreground: 210 40% 98%;
 
-    --popover: 220 20% 15%;
-    --popover-foreground: 210 40% 98%;
+		--popover: 220 20% 15%;
+		--popover-foreground: 210 40% 98%;
 
-    --primary: 45 90% 60%;
-    --primary-foreground: 220 25% 10%;
+		--primary: 45 90% 60%;
+		--primary-foreground: 220 25% 10%;
 
-    --secondary: 215 60% 50%;
-    --secondary-foreground: 210 40% 98%;
+		--secondary: 215 60% 50%;
+		--secondary-foreground: 210 40% 98%;
 
-    --muted: 220 15% 25%;
-    --muted-foreground: 215 20% 65%;
+		--muted: 220 15% 25%;
+		--muted-foreground: 215 20% 65%;
 
-    --accent: 45 90% 60%;
-    --accent-foreground: 220 25% 10%;
+		--accent: 45 90% 60%;
+		--accent-foreground: 220 25% 10%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+		--destructive: 0 84.2% 60.2%;
+		--destructive-foreground: 210 40% 98%;
 
-    --border: 220 20% 25%;
-    --input: 220 20% 20%;
-    --ring: 45 90% 60%;
+		--border: 220 20% 25%;
+		--input: 220 20% 20%;
+		--ring: 45 90% 60%;
 
-    --radius: 1rem;
-    
-    --gradient-radial: radial-gradient(circle at center, hsl(220 25% 15%), hsl(220 25% 10%));
-    --gradient-gold: linear-gradient(135deg, hsl(45 90% 60%), hsl(35 85% 55%));
-    --shadow-glow: 0 0 40px hsl(45 90% 60% / 0.3);
-    --shadow-elegant: 0 20px 60px -10px hsl(0 0% 0% / 0.5);
+		--radius: 1rem;
 
-    --sidebar-background: 0 0% 98%;
+		--gradient-radial: radial-gradient(
+			circle at center,
+			hsl(220 25% 15%),
+			hsl(220 25% 10%)
+		);
+		--gradient-gold: linear-gradient(135deg, hsl(45 90% 60%), hsl(35 85% 55%));
+		--shadow-glow: 0 0 40px hsl(45 90% 60% / 0.3);
+		--shadow-elegant: 0 20px 60px -10px hsl(0 0% 0% / 0.5);
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+		--sidebar-background: 0 0% 98%;
 
-    --sidebar-primary: 240 5.9% 10%;
+		--sidebar-foreground: 240 5.3% 26.1%;
 
-    --sidebar-primary-foreground: 0 0% 98%;
+		--sidebar-primary: 240 5.9% 10%;
 
-    --sidebar-accent: 240 4.8% 95.9%;
+		--sidebar-primary-foreground: 0 0% 98%;
 
-    --sidebar-accent-foreground: 240 5.9% 10%;
+		--sidebar-accent: 240 4.8% 95.9%;
 
-    --sidebar-border: 220 13% 91%;
+		--sidebar-accent-foreground: 240 5.9% 10%;
 
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
+		--sidebar-border: 220 13% 91%;
 
+		--sidebar-ring: 217.2 91.2% 59.8%;
+	}
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
+	* {
+		@apply border-border;
+	}
 
-  body {
-    @apply bg-background text-foreground font-geist;
-    overflow: hidden;
-  }
-  
-  html {
-    overflow: hidden;
-  }
+	body {
+		@apply bg-background text-foreground font-geist;
+		overflow: hidden;
+	}
+
+	html {
+		overflow: hidden;
+	}
 }
 
 @layer utilities {
-  .bg-gradient-radial {
-    background: radial-gradient(circle at center, hsl(220 25% 15%), hsl(220 25% 10%));
-  }
-  
-  .bg-size-200 {
-    background-size: 200% auto;
-  }
-  
-  .bg-pos-100 {
-    background-position: 100% center;
-  }
+	.bg-gradient-radial {
+		background: radial-gradient(
+			circle at center,
+			hsl(220 25% 15%),
+			hsl(220 25% 10%)
+		);
+	}
+
+	.bg-size-200 {
+		background-size: 200% auto;
+	}
+
+	.bg-pos-100 {
+		background-position: 100% center;
+	}
+
+	.breathing {
+		animation: breathing 2s ease-in-out infinite;
+	}
+
+	.font-geist-mono {
+		font-family: "Geist Mono";
+	}
+}
+
+@keyframes breathing {
+	0%,
+	100% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.15);
+	}
 }
