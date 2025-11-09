@@ -44,6 +44,16 @@ const references = [
 		image: "./references/zr.webp",
 		name: "ZR Friends - Luiz & Mel",
 	},
+	{
+		id: "silva-pereira",
+		image: "./references/silva-pereira.webp",
+		name: "Família Silva Pereira",
+	},
+	{
+		id: "pujoni-souza",
+		image: "./references/pujoni-souza.webp",
+		name: "Família Pujoni Souza",
+	},
 ];
 
 export default references;
