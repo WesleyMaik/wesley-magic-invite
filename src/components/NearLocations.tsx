@@ -10,6 +10,27 @@ interface NearLocationsProps {
 	children?: ReactNode;
 }
 
+const NEAR_LOCATIONS = [
+	{
+		name: "Supermercado Feitosa",
+		address: "Av. Mário Madeira, 652 - Lot. Bela Laguna",
+		image: "/near-locations/1.webp",
+		url: "https://maps.app.goo.gl/sGK2NpayiuWZbQLA7",
+	},
+	{
+		name: "Conveniência Joes",
+		address: "R. Poente - Bairro Bela Laguna",
+		image: "/near-locations/2.webp",
+		url: "https://maps.app.goo.gl/tJRvYkN169nJN3QW7",
+	},
+	{
+		name: "Supermercados Pires (não é perto não)",
+		address: "R. Acaia, 760 - Jardim Taruma",
+		image: "/near-locations/3.webp",
+		url: "https://maps.app.goo.gl/MniZia52XEUtduRj9",
+	},
+];
+
 export default function NearLocations({ children }: NearLocationsProps) {
 	return (
 		<Drawer.Root direction="right">
@@ -38,26 +59,29 @@ export default function NearLocations({ children }: NearLocationsProps) {
 							<Separator className="opacity-20" />
 							<Drawer.Description className="text-zinc-600 my-2">
 								<div className="flex flex-col gap-2">
-									<a
-										href={`https://maps.app.goo.gl/sGK2NpayiuWZbQLA7`}
-										target="_blank"
-										className="flex gap-2 items-center"
-									>
-										<img
-											src={LOCATION_1}
-											alt="Supermercado Feitosa"
-											width={80}
-											className="rounded-md"
-										/>
-										<div className="flex flex-col gap-1">
-											<h2 className="font-medium text-zinc-800">
-												Supermercado Feitosa
-											</h2>
-											<p className="text-zinc-600 text-sm">
-												Av. Mário Madeira, 652 - Lot. Bela Laguna
-											</p>
-										</div>
-									</a>
+									{NEAR_LOCATIONS.map((location) => (
+										<a
+											key={location.name}
+											href={location.url}
+											target="_blank"
+											className="flex gap-2 items-center min-h-[80px]"
+										>
+											<img
+												src={location.image}
+												alt={location.name}
+												width={80}
+												className="h-full object-cover aspect-square  rounded-md"
+											/>
+											<div className="flex flex-col gap-1">
+												<h2 className="font-medium text-zinc-800">
+													{location.name}
+												</h2>
+												<p className="text-zinc-600 text-sm">
+													{location.address}
+												</p>
+											</div>
+										</a>
+									))}
 								</div>
 							</Drawer.Description>
 						</div>

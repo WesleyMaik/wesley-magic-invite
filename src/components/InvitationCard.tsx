@@ -39,14 +39,14 @@ const InvitationCard = () => {
 	};
 
 	return (
-		<>
+		<div className=" overflow-y-auto h-screen pb-8">
 			<div className="absolute top-0 left-0 w-full h-full">
 				{showConfetti && (
 					<Confetti
 						width={window.innerWidth}
 						height={totalHeight}
 						recycle={confettiRecycle}
-						numberOfPieces={5000}
+						numberOfPieces={1000}
 						gravity={0.3}
 					/>
 				)}
@@ -57,20 +57,19 @@ const InvitationCard = () => {
 					<div className="p-8 md:p-12 text-center space-y-6">
 						{/* Title */}
 						<div className="flex flex-col items-center text-center space-y-4 opacity-0 animate-fade-in-delay-1">
-							<h1 className="text-4xl md:text-4xl font-bold font-white">
+							<h1 className="lg:text-3xl text-2xl font-bold font-white">
 								Você foi convidado para a
 							</h1>
 							<img
 								src={"/logo.webp"}
 								alt="Festa do Weslito"
-								className="breathing"
-								width={300}
+								className="breathing lg:w-64 w-48"
 							/>
 
 							{/* Profile Image */}
-							<div className="flex gap-2 items-center ">
+							<div className="flex gap-2 items-center">
 								<div className="opacity-0 animate-fade-in">
-									<div className="relative w-20 h-20  mx-auto">
+									<div className="relative lg:w-20 lg:h-20 w-16 h-16 mx-auto">
 										<div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-full blur-md opacity-50 animate-pulse" />
 										<img
 											src={profileImage}
@@ -80,8 +79,10 @@ const InvitationCard = () => {
 									</div>
 								</div>
 								<div className="flex flex-col items-start">
-									<h1 className="text-3xl font-bold text-white">Wesley Maik</h1>
-									<p className="text-xl text-white">Te convidou</p>
+									<h1 className="lg:text-3xl text-2xl font-bold text-white">
+										Wesley Maik
+									</h1>
+									<p className="lg:text-xl text-lg text-white">Te convidou</p>
 								</div>
 							</div>
 						</div>
@@ -114,7 +115,7 @@ const InvitationCard = () => {
 						</div>
 
 						{/* Action Buttons */}
-						<div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 opacity-0 animate-fade-in-delay-3">
+						<div className="grid grid-cols-1 md:grid-cols-2 gap-4 opacity-0 animate-fade-in-delay-3">
 							<HoverPeek url={`https://maps.app.goo.gl/nrVLdWg1p5JHmUeZA`}>
 								<Button
 									onClick={handleMapsClick}
@@ -154,7 +155,7 @@ const InvitationCard = () => {
 					</div>
 				</Card>
 			</div>
-		</>
+		</div>
 	);
 };
 

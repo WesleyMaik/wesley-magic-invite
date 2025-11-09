@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { toast } from "sonner";
 
 import references from "@/contants/references";
@@ -18,12 +18,17 @@ export function InvitationRef() {
 	}: ToastElement) {
 		return (
 			<div className="flex gap-2 items-center">
-				<img src={image} alt="Image" width={60} className="rounded-full" />
+				<img
+					src={image}
+					alt="Image"
+					width={60}
+					className="rounded-full aspect-square"
+				/>
 				<div>
 					<p className="text-white font-bold">
 						Você recebeu um convite especial!
 					</p>
-					<p className="text-white">Convite por: {name}</p>
+					<p className="text-white">Convite para: {name}</p>
 				</div>
 			</div>
 		);

@@ -5,7 +5,7 @@ import { InvitationRef } from "@/components/InvitationRef";
 
 const Index = () => {
 	return (
-		<div className="relative w-full h-screen overflow-y-auto overflow-x-hidden pb-8 bg-gradient-to-t from-[#2b303b] via-[#237ff7] via-[#cf69cf] to-[#ffb300]">
+		<div className="relative w-full h-screen overflow-y-auto overflow-x-hidden bg-gradient-to-t from-[#2b303b] via-[#237ff7] via-[#cf69cf] to-[#ffb300]">
 			<div className="absolute w-full h-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
 				<BrowserView>
 					<div className="absolute top-0 left-0 w-full h-full">
