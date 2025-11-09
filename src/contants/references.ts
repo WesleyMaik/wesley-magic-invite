@@ -30,9 +30,9 @@ const references = [
 		name: "Mavi Cakes",
 	},
 	{
-		id: "wesley",
+		id: "sogra",
 		image: "./references/sogra.webp",
-		name: "Sogra Querida",
+		name: "Sogra Querida 💕",
 	},
 	{
 		id: "vineco",
