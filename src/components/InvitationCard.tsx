@@ -61,7 +61,7 @@ const InvitationCard = () => {
 								Você foi convidado para a
 							</h1>
 							<img
-								src={"/logo.webp"}
+								src={"./logo.webp"}
 								alt="Festa do Weslito"
 								className="breathing lg:w-64 w-48"
 							/>
