@@ -96,7 +96,7 @@ const InvitationCard = () => {
 
 							<div className="flex items-center justify-center gap-1  flex-1">
 								<Clock className="min-w-6 h-6 text-white" />
-								<span className="text-white">Horário: 11h</span>
+								<span className="text-white">Horário: 12h</span>
 							</div>
 						</div>
 						<div>
